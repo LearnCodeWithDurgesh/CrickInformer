@@ -1,0 +1,24 @@
+@if (loading) {
+<h1 class="p-4 text-2xl text-center">Loading...</h1>
+} @if (!loading) {
+<div class="flex py-3 px-10 justify-between">
+  <h1 class="text-gray-600 font-extrabold text-4xl">
+    <ngx-typed-js
+      [typeSpeed]="50"
+      [loop]="true"
+      [strings]="['History', 'Completed']"
+    >
+      Match <span class="typing"></span>
+    </ngx-typed-js>
+  </h1>
+</div>
+<div class="flex flex-wrap items-stretch">
+  @for (match of allMatches; track $index) {
+  @if (match.status==='COMPLETED') {
+    <div class="w-full md:w-[33%] p-3">
+        <app-live-match-card [data]="match"></app-live-match-card>
+      </div>
+  }
+  }
+</div>
+}

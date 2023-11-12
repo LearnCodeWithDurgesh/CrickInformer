@@ -1,0 +1,22 @@
+@if (data) {
+    <div class="bg-white transition-all hover:bg-blue-500 hover:text-white hover:border-b-orange-300 card h-full shadow border rounded-xl border-b-8 border-b-blue-400 cursor-pointer p-3 space-y-2">
+       
+        <div class="py-3  border-b-2">
+            <h1 class="font-bold">{{data.teamHeading }}</h1>
+            <p class="font-light">{{data.matchNumberVenue}}</p>
+        </div>
+        <div class="flex justify-between">
+         <h1 class="font-bold text-gray-600">{{data.battingTeam}}</h1>
+         <h1 class="font-bold">{{data.battingTeamScore}}</h1>
+        </div>
+        <div class="flex justify-between">
+         <h1 class="font-bold text-gray-600">{{data.bowlTeam}}</h1>
+         <h1 class="font-bold">{{data.bowlTeamScore}}</h1>
+        </div>
+        <div >
+         <p class="text-red-500">{{data.liveText}}</p>
+         <p class="text-green-800">{{data.textComplete}}</p>
+        </div>
+     </div>
+}
+

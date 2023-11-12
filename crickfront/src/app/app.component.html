@@ -1,0 +1,26 @@
+<div class="bg-gray-100 h-[100vh]">
+    <!-- Navbar -->
+<nav class="bg-blue-500 p-4">
+    <div class="container mx-auto flex items-center justify-between">
+        <!-- Brand Logo -->
+        <a href="#" class="text-white text-lg font-semibold">
+            CrickInfomer
+        </a>
+
+        <!-- Navigation Menus -->
+        <div class="flex space-x-4">
+            <a [routerLink]="'/live'"  class="text-white cursor-pointer">Live Score</a>
+            <a [routerLink]="'/all-matches'"  class="text-white cursor-pointer">All Matches</a>
+            <a routerLink="/point-table"  class="text-white cursor-pointer">CWC2023 Point Table</a>
+            <a routerLink="/"  class="text-white cursor-pointer">Home</a>
+        </div>
+        <div></div>
+    </div>
+</nav>
+<div class="container mx-auto px-16">
+
+
+<router-outlet></router-outlet>
+</div>
+
+</div>

@@ -1,0 +1,37 @@
+<div>
+  @if (pointTable) {
+
+    <h1 class=" px-3 py-2  text-4xl">CWC2023 Point Table</h1>
+
+    <table class=" mt-2 shadow rounded  min-w-full bg-white border border-gray-300">
+        <thead>
+         
+            <tr>
+                @for (heading of pointTableRow; track $index) {
+                    <th class="py-2 px-4 border-b">{{heading}}</th>
+                }
+               
+              
+            </tr>
+       
+        </thead>
+        <tbody>
+         
+        
+            @for (team of pointTable ; track $index) {
+                <tr [ngClass]="{
+                    'bg-green-100 text-black':$index<=4,
+                    'bg-red-100 text-black':$index>4
+                }" class="cursor-pointer hover:bg-blue-500 hover:text-white transition-all">
+                  @for (item of team; track $index) {
+                        <td [ngClass]="{
+                          'font-bold':$index==0
+                        }" class="py-2 px-4 border-b">{{item}}</td>
+                  }
+                </tr>
+            }
+          <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+  }
+</div>
